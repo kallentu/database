@@ -22,7 +22,7 @@
         android:layout_below="@+id/productID"
         android:layout_alignParentStart="true"
         android:layout_marginTop="27dp"
-        android:hint="Product"/>
+        android:hint="Product Name"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -31,7 +31,7 @@
         android:layout_below="@+id/product"
         android:layout_alignParentStart="true"
         android:layout_marginTop="36dp"
-        android:hint="Description"/>
+        android:hint="File Path"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -59,4 +59,13 @@
         android:onClick="removeProduct"
         android:layout_centerVertical="true"
         android:layout_toEndOf="@+id/button2" />
+
+    <ImageView
+        android:layout_width="500px"
+        android:layout_height="200px"
+        android:id="@+id/picture"
+        android:src="@drawable/ic_action_name"
+        android:layout_below="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp" />
 </RelativeLayout>

@@ -1,10 +1,15 @@
 package com.innovation.innovationdatabase;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.io.File;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -50,6 +55,20 @@ public class MainActivity extends AppCompatActivity {
             idView.setText(String.valueOf(product.getID()));
 
             descriptionBox.setText(String.valueOf(product.getDescription()));
+
+            //Gets file path of image and sets it to the image view
+            File imgFile = new  File(String.valueOf(product.getDescription()));
+
+            if(imgFile.exists()){
+
+                Bitmap myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
+
+                ImageView myImage = (ImageView) findViewById(R.id.picture);
+
+                myImage.setImageBitmap(myBitmap);
+
+            }
+
         } else {
             idView.setText("No Match Found");
         }
