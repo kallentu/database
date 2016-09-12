@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
             descriptionBox.setText(String.valueOf(product.getDescription()));
 
+            //Gets file path of image and sets it to the image view
             File imgFile = new  File(String.valueOf(product.getDescription()));
 
             if(imgFile.exists()){
